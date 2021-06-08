@@ -8,6 +8,8 @@
         "struct_timeval.h": "c",
         "types.h": "c",
         "cmath": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "cstdio": "c",
+        "*.tcc": "c"
     }
 }
