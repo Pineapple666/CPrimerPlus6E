@@ -5,7 +5,7 @@
             "name": "gcc - 生成和调试活动文件",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/out/${fileBasenameNoExtension}.out",
+            "program": "${workspaceFolder}/out/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

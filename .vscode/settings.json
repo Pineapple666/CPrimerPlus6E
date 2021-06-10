@@ -11,6 +11,9 @@
         "typeinfo": "c",
         "cstdio": "c",
         "*.tcc": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "ctype.h": "c",
+        "features.h": "c",
+        "stdlib.h": "c"
     }
 }
