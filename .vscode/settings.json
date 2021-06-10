@@ -10,6 +10,7 @@
         "cmath": "c",
         "typeinfo": "c",
         "cstdio": "c",
-        "*.tcc": "c"
+        "*.tcc": "c",
+        "string.h": "c"
     }
 }
