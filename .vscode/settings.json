@@ -14,6 +14,15 @@
         "string.h": "c",
         "ctype.h": "c",
         "features.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "stdarg.h": "c",
+        "libc-header-start.h": "c",
+        "cstdlib": "c",
+        "algorithm": "c",
+        "stddef.h": "c",
+        "waitstatus.h": "c",
+        "waitflags.h": "c",
+        "floatn.h": "c",
+        "ex12_12_diceroll.h": "c"
     }
 }
