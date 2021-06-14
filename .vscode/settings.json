@@ -23,6 +23,7 @@
         "waitstatus.h": "c",
         "waitflags.h": "c",
         "floatn.h": "c",
-        "ex12_12_diceroll.h": "c"
+        "ex12_12_diceroll.h": "c",
+        "lib-names-64.h": "c"
     }
 }
