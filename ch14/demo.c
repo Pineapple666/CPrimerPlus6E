@@ -4,11 +4,10 @@
 
 int main(void)
 {
-    char temp[] = "I am pineapple.\n";
-    char *desc;
-    desc = (char *)malloc(strlen(temp) + 1);
-    printf("%s, %p\n", desc, desc);
-    free(desc);
+    const char *colors[] = {"red", "orange", "yellow", "green", "blue", "violet"};
+    char *temp[] = {"a", "b", "c", "d", "e", "f"};
+    printf("%s, %p, %p\n", colors[1], colors[1], &colors[1]);
+    printf("%s, %p\n", temp[1], &temp[1]);
 
     return 0;
 }

@@ -24,6 +24,7 @@
         "waitflags.h": "c",
         "floatn.h": "c",
         "ex12_12_diceroll.h": "c",
-        "lib-names-64.h": "c"
+        "lib-names-64.h": "c",
+        "stdbool.h": "c"
     }
 }
