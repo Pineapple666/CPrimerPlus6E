@@ -2,6 +2,7 @@
     "cmake.configureOnOpen": false,
     "python.pythonPath": "/usr/bin/python3",
     "files.associations": {
+        "*.py": "python",
         "stdio.h": "c",
         "limits": "c",
         "type_traits": "c",
@@ -26,6 +27,7 @@
         "ex12_12_diceroll.h": "c",
         "lib-names-64.h": "c",
         "stdbool.h": "c",
-        "streambuf": "c"
+        "streambuf": "c",
+        "stdalign.h": "c"
     }
 }
