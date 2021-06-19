@@ -28,6 +28,9 @@
         "lib-names-64.h": "c",
         "stdbool.h": "c",
         "streambuf": "c",
-        "stdalign.h": "c"
+        "stdalign.h": "c",
+        "math.h": "c",
+        "ex16_6_names_st.h": "c",
+        "ex16_10_names.h": "c"
     }
 }
