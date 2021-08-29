@@ -4,3 +4,5 @@
 我除了前面几章基本输入输出、运算符、循环控制语句等没有看，其它的都看了一遍。专心的去看大概需要半个月的时间。
 
 此仓库为我看过后整理的全部代码，.vscode 目录是在windows平台的vscode上运行的相关配置。
+
+电子书可以在微信读书上看：[https://weread.qq.com/web/reader/a99327c071d07b0da996784](https://weread.qq.com/web/reader/a99327c071d07b0da996784)
