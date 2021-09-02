@@ -1,0 +1,5 @@
+{
+    "files.associations": {
+        "*.h": "c" // 默认所有 .h 文件都为 C 头文件
+    }
+}
