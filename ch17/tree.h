@@ -7,24 +7,21 @@
 
 // 根据实际情况定义 Item
 #define SLEN 20
-typedef struct item
-{
-    char petname[SLEN];
-    char petkind[SLEN];
+typedef struct item {
+	char petname[SLEN];
+	char petkind[SLEN];
 } Item;
 
 #define MAXITEMS 10
-typedef struct trnode
-{
-    Item item;
-    struct trnode *left;  // 指向左分支的指针
-    struct trnode *right; // 指向右分支的指针
+typedef struct trnode {
+	Item item;
+	struct trnode *left; // 指向左分支的指针
+	struct trnode *right; // 指向右分支的指针
 } Trnode;
 
-typedef struct tree
-{
-    Trnode *root; // 指向根节点的指针
-    int size;     // 树的项数
+typedef struct tree {
+	Trnode *root; // 指向根节点的指针
+	int size; // 树的项数
 } Tree;
 
 // 函数原型

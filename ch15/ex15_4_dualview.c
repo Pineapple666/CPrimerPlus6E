@@ -33,24 +33,23 @@
 #define B_DASHED 0x2000
 #define STYLE_MASK 0x3000
 
-const char *colors[8] = {"black", "red", "green", "yellow", "blue", "magenta", "cyan", "white"};
+const char *colors[8] = { "black", "red",     "green", "yellow",
+			  "blue",  "magenta", "cyan",  "white" };
 
-struct box_props
-{
-    bool opaque : 1;
-    unsigned int fill_color : 3;
-    unsigned int : 4;
-    bool show_border : 1;
-    unsigned int border_color : 3;
-    unsigned int border_style : 2;
-    unsigned int : 2;
+struct box_props {
+	bool opaque : 1;
+	unsigned int fill_color : 3;
+	unsigned int : 4;
+	bool show_border : 1;
+	unsigned int border_color : 3;
+	unsigned int border_style : 2;
+	unsigned int : 2;
 };
 
 // 把数据看作结构或 unsigned short 类型的变量
-union Views
-{
-    struct box_props st_view;
-    unsigned short us_view;
+union Views {
+	struct box_props st_view;
+	unsigned short us_view;
 };
 
 void show_settings(const struct box_props *pb);
@@ -61,83 +60,82 @@ char *itobs(int n, char *ps);
 
 int main(void)
 {
-    // 创建Views联合，并初始化
-    union Views box = {{true, YELLOW, true, GREEN, DASHED}};
-    char bin_str[CHAR_BIT * sizeof(unsigned int) + 1];
-    printf("Original box settings:\n");
-    show_settings(&box.st_view);
-    printf("\nBox settings using unsigned int view:\n");
-    show_settings1(box.us_view);
-    printf("bits are %s\n", itobs(box.us_view, bin_str));
-    box.us_view &= ~FILL_MASK;               // 把表示填充色的位清零
-    box.us_view |= (FILL_BLUE | FILL_GREEN); // 重置填充色 CYAN
-    box.us_view ^= OPAQUE;                   // 切换是否透明的位
-    box.us_view |= BORDER_GREEN;             // 错误的方法
-    box.us_view &= ~STYLE_MASK;              // 把样式的位清零
-    box.us_view |= B_DOTTED;                 // 把样式位设置为点
-    printf("\nModified box settings:\n");
-    show_settings(&box.st_view);
-    printf("\nBox settings using unsigned int view:\n");
-    show_settings1(box.us_view);
-    printf("bits are %s\n", itobs(box.us_view, bin_str));
+	// 创建Views联合，并初始化
+	union Views box = { { true, YELLOW, true, GREEN, DASHED } };
+	char bin_str[CHAR_BIT * sizeof(unsigned int) + 1];
+	printf("Original box settings:\n");
+	show_settings(&box.st_view);
+	printf("\nBox settings using unsigned int view:\n");
+	show_settings1(box.us_view);
+	printf("bits are %s\n", itobs(box.us_view, bin_str));
+	box.us_view &= ~FILL_MASK; // 把表示填充色的位清零
+	box.us_view |= (FILL_BLUE | FILL_GREEN); // 重置填充色 CYAN
+	box.us_view ^= OPAQUE; // 切换是否透明的位
+	box.us_view |= BORDER_GREEN; // 错误的方法
+	box.us_view &= ~STYLE_MASK; // 把样式的位清零
+	box.us_view |= B_DOTTED; // 把样式位设置为点
+	printf("\nModified box settings:\n");
+	show_settings(&box.st_view);
+	printf("\nBox settings using unsigned int view:\n");
+	show_settings1(box.us_view);
+	printf("bits are %s\n", itobs(box.us_view, bin_str));
 
-    return 0;
+	return 0;
 }
 
 void show_settings(const struct box_props *pb)
 {
-    printf("Box is %s.\n", pb->opaque == true ? "opaque" : "transparent");
-    printf("The fill color is %s.\n", colors[pb->fill_color]);
-    printf("Border %s.\n", pb->show_border == true ? "shown" : "not shown");
-    printf("The border color is %s.\n", colors[pb->border_color]);
-    printf("The border style is ");
-    switch (pb->border_style)
-    {
-    case SOLID:
-        printf("sokid.\n");
-        break;
-    case DOTTED:
-        printf("dotted.\n");
-        break;
-    case DASHED:
-        printf("dashed.\n");
-        break;
-    default:
-        printf("unknown type.\n");
-    }
+	printf("Box is %s.\n", pb->opaque == true ? "opaque" : "transparent");
+	printf("The fill color is %s.\n", colors[pb->fill_color]);
+	printf("Border %s.\n", pb->show_border == true ? "shown" : "not shown");
+	printf("The border color is %s.\n", colors[pb->border_color]);
+	printf("The border style is ");
+	switch (pb->border_style) {
+	case SOLID:
+		printf("sokid.\n");
+		break;
+	case DOTTED:
+		printf("dotted.\n");
+		break;
+	case DASHED:
+		printf("dashed.\n");
+		break;
+	default:
+		printf("unknown type.\n");
+	}
 }
 
 void show_settings1(unsigned short us)
 {
-    printf("box is %s.\n", (us & OPAQUE) == OPAQUE ? "opaque" : "transparent");
-    // 颜色是三位的，一位八进制也可以转成三位二进制，所以可以用 &
-    printf("The fill color is %s.\n", colors[(us >> 1) & 07]);
-    printf("Border %s.\n", (us & BORDER) == BORDER ? "shown" : "not shown");
-    printf("The border style is ");
-    switch (us & STYLE_MASK)
-    {
-    case B_SOLID:
-        printf("solid.\n");
-        break;
-    case B_DOTTED:
-        printf("dotted.\n");
-        break;
-    case B_DASHED:
-        printf("dashed.\n");
-        break;
-    default:
-        printf("unknown type.\n");
-    }
-    printf("The border color is %s.\n", colors[(us >> 9) & 07]);
+	printf("box is %s.\n",
+	       (us & OPAQUE) == OPAQUE ? "opaque" : "transparent");
+	// 颜色是三位的，一位八进制也可以转成三位二进制，所以可以用 &
+	printf("The fill color is %s.\n", colors[(us >> 1) & 07]);
+	printf("Border %s.\n", (us & BORDER) == BORDER ? "shown" : "not shown");
+	printf("The border style is ");
+	switch (us & STYLE_MASK) {
+	case B_SOLID:
+		printf("solid.\n");
+		break;
+	case B_DOTTED:
+		printf("dotted.\n");
+		break;
+	case B_DASHED:
+		printf("dashed.\n");
+		break;
+	default:
+		printf("unknown type.\n");
+	}
+	printf("The border color is %s.\n", colors[(us >> 9) & 07]);
 }
 
 char *itobs(int n, char *ps)
 {
-    int i;
-    const static int size = CHAR_BIT * sizeof(int);
-    for (i = size - 1; i >= 0; i--, n >>= 1)
-        ps[i] = (01 & n) + '0';
-    ps[size] = '\0';
+	int i;
+	const static int size = CHAR_BIT * sizeof(int);
+	for (i = size - 1; i >= 0; i--, n >>= 1)
+		ps[i] = (01 & n) + '0';
+	ps[size] = '\0';
 
-    return ps;
+	return ps;
 }

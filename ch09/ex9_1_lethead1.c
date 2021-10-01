@@ -10,19 +10,19 @@ void starbar(void); // 函数原型
 
 int main(void)
 {
-    starbar();
-    printf("%s\n", NAME);
-    printf("%s\n", ADDRESS);
-    printf("%s\n", PLACE);
-    starbar(); // 使用函数
+	starbar();
+	printf("%s\n", NAME);
+	printf("%s\n", ADDRESS);
+	printf("%s\n", PLACE);
+	starbar(); // 使用函数
 
-    return 0;
+	return 0;
 }
 
 void starbar(void) // 定义函数
 {
-    int count;
-    for (count = 1; count < WIDTH; count++)
-        putchar('*');
-    putchar('\n');
+	int count;
+	for (count = 1; count < WIDTH; count++)
+		putchar('*');
+	putchar('\n');
 }

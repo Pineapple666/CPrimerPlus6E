@@ -3,8 +3,8 @@
 
 int main(void)
 {
-    printf("%ld\n", sizeof(char));
-    printf("%ld\n", sizeof(unsigned int));
+	printf("%ld\n", sizeof(char));
+	printf("%ld\n", sizeof(unsigned int));
 
-    return 0;
+	return 0;
 }

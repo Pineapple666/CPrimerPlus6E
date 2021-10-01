@@ -2,15 +2,14 @@
 #include <stdio.h>
 #include <string.h>
 #define TSIZE 45 // 存储片名的数组大小
-#define FMAX 5   // 影片的最大数量
+#define FMAX 5 // 影片的最大数量
 
-struct film
-{
+struct film {
 	char title[TSIZE];
 	int rating;
 };
 
-char* s_gets(char* st, int n);
+char *s_gets(char *st, int n);
 
 inline static void eatline();
 
@@ -20,8 +19,7 @@ int main(void)
 	int i = 0;
 	int j;
 	puts("Enter first movie title:");
-	while (i < FMAX && s_gets(movies[i].title, TSIZE) != NULL)
-	{
+	while (i < FMAX && s_gets(movies[i].title, TSIZE) != NULL) {
 		puts("Enter your rating <0-10>:");
 		scanf("%d", movies[i].rating);
 		eatline();
@@ -32,19 +30,19 @@ int main(void)
 	else
 		printf("Here is the movie list:\n");
 	for (j = 0; j < i; j++)
-		printf("Movie: %s Rating: %d\n", movies[j].title, movies[j].rating);
+		printf("Movie: %s Rating: %d\n", movies[j].title,
+		       movies[j].rating);
 	printf("Bey!\n");
 
 	return 0;
 }
 
-char* s_gets(char* st, int n)
+char *s_gets(char *st, int n)
 {
-	char* ret_val;
-	char* find;
+	char *ret_val;
+	char *find;
 	ret_val = fgets(st, n, stdin);
-	if (ret_val)
-	{
+	if (ret_val) {
 		find = strchr(st, '\n');
 		if (find)
 			*find = '\0';

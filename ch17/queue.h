@@ -8,25 +8,22 @@
 // typedef int Item; // 用于 use_q.c
 // 或者 typedef struct item {int gumption; int charisma;} Item;
 
-typedef struct item
-{
-    long arrive;     // 一位顾客加入队列的时间
-    int processtime; // 该顾客咨询时花费的时间
+typedef struct item {
+	long arrive; // 一位顾客加入队列的时间
+	int processtime; // 该顾客咨询时花费的时间
 } Item;
 
 #define MAXQUEUE 10
 
-typedef struct node
-{
-    Item item;
-    struct node *next;
+typedef struct node {
+	Item item;
+	struct node *next;
 } Node;
 
-typedef struct queue
-{
-    Node *front; // 指向队列首项的指针
-    Node *rear;  // 指向队列尾项的指针
-    int items;   // 队列中的项数
+typedef struct queue {
+	Node *front; // 指向队列首项的指针
+	Node *rear; // 指向队列尾项的指针
+	int items; // 队列中的项数
 } Queue;
 
 /**

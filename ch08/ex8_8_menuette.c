@@ -12,78 +12,74 @@ int get_int(void);
 
 int main(void)
 {
-    int choice;
-    while ((choice = get_choice()) != 'q')
-    {
-        switch (choice)
-        {
-        case 'a':
-            printf("Buy low, sell high.\n");
-            break;
-        case 'b':
-            putchar('\a'); // ANSI
-            break;
-        case 'c':
-            count();
-            break;
-        default:
-            printf("Program error!\n");
-            break;
-        }
-    }
-    printf("Bye.\n");
+	int choice;
+	while ((choice = get_choice()) != 'q') {
+		switch (choice) {
+		case 'a':
+			printf("Buy low, sell high.\n");
+			break;
+		case 'b':
+			putchar('\a'); // ANSI
+			break;
+		case 'c':
+			count();
+			break;
+		default:
+			printf("Program error!\n");
+			break;
+		}
+	}
+	printf("Bye.\n");
 
-    return 0;
+	return 0;
 }
 
 char get_choice(void)
 {
-    int ch;
-    printf("Enter the letter of your choice: \n");
-    printf("a. advice        b .bell\n");
-    printf("c. count         q. quit\n");
-    ch = get_first();
-    while ((ch < 'a' || ch > 'c') && ch != 'q')
-    {
-        printf("Please respond with a, b, c or q.\n");
-        ch = get_first();
-    }
+	int ch;
+	printf("Enter the letter of your choice: \n");
+	printf("a. advice        b .bell\n");
+	printf("c. count         q. quit\n");
+	ch = get_first();
+	while ((ch < 'a' || ch > 'c') && ch != 'q') {
+		printf("Please respond with a, b, c or q.\n");
+		ch = get_first();
+	}
 
-    return ch;
+	return ch;
 }
 
 char get_first(void)
 {
-    int ch;
-    ch = getchar();
-    while (getchar() != '\n')
-        continue;
+	int ch;
+	ch = getchar();
+	while (getchar() != '\n')
+		continue;
 
-    return ch;
+	return ch;
 }
 
 void count(void)
 {
-    int n, i;
-    printf("Count how far? Enter an integer: ");
-    n = get_int();
-    for (i = 1; i <= n; i++)
-        printf("%d\n", i);
-    while (getchar() != '\n')
-        continue;
+	int n, i;
+	printf("Count how far? Enter an integer: ");
+	n = get_int();
+	for (i = 1; i <= n; i++)
+		printf("%d\n", i);
+	while (getchar() != '\n')
+		continue;
 }
 
 int get_int(void)
 {
-    int input;
-    char ch;
-    while (scanf("%d", &input) != 1)
-    {
-        while ((ch = getchar()) != '\n')
-            putchar(ch); // 错误处理输出
-        printf(" is not an integer.\nPlease enter an "
-               "integer value, such as 25, -178, or 3: ");
-    }
+	int input;
+	char ch;
+	while (scanf("%d", &input) != 1) {
+		while ((ch = getchar()) != '\n')
+			putchar(ch); // 错误处理输出
+		printf(" is not an integer.\nPlease enter an "
+		       "integer value, such as 25, -178, or 3: ");
+	}
 
-    return input;
+	return input;
 }

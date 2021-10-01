@@ -3,14 +3,14 @@
 
 int main(void)
 {
-    char str1[80] = "An array was initailized to me.";
-    const char *str2 = "A pointer was initailized to me.";
-    puts("I'm an argument to puts().");
-    puts(DEF);
-    puts(str1);
-    puts(str2);
-    puts(&str1[5]);
-    puts(str2 + 4);
+	char str1[80] = "An array was initailized to me.";
+	const char *str2 = "A pointer was initailized to me.";
+	puts("I'm an argument to puts().");
+	puts(DEF);
+	puts(str1);
+	puts(str2);
+	puts(&str1[5]);
+	puts(str2 + 4);
 
-    return 0;
+	return 0;
 }

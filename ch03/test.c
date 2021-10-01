@@ -2,9 +2,8 @@
 
 int main(void)
 {
+	char beep = '\f';
+	printf("%c", beep);
 
-    char beep = '\f';
-    printf("%c", beep);
-
-    return 0;
+	return 0;
 }

@@ -4,14 +4,14 @@
 
 int main(void)
 {
-    /**
+	/**
      * 第一个参数代表指定的对齐
      * 第二个参数代表所需的字节数，应是第一个参数的倍数
      * 返回一个指针
      */
-    char *p = (char *)aligned_alloc(sizeof(int), 100 * sizeof(double));
-    printf("%p\n", p);
-    free(p);
+	char *p = (char *)aligned_alloc(sizeof(int), 100 * sizeof(double));
+	printf("%p\n", p);
+	free(p);
 
-    return 0;
+	return 0;
 }

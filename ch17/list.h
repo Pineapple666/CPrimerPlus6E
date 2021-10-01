@@ -6,18 +6,16 @@
 
 // 指定程序的声明
 #define TSIZE 45 // 存储电影名的数组大小
-struct film
-{
-    char title[TSIZE];
-    int rating;
+struct film {
+	char title[TSIZE];
+	int rating;
 };
 
 // 一般类型定义
 typedef struct film Item;
-typedef struct node
-{
-    Item item;
-    struct node *next;
+typedef struct node {
+	Item item;
+	struct node *next;
 } Node;
 typedef Node *List;
 

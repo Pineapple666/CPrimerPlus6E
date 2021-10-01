@@ -4,10 +4,9 @@
 #define SLEN 32
 
 // 结构声明
-struct names_st
-{
-    char first[SLEN];
-    char last[SLEN];
+struct names_st {
+	char first[SLEN];
+	char last[SLEN];
 };
 
 // 类型定义

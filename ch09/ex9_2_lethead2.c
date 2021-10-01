@@ -11,26 +11,26 @@ void show_n_char(char ch, int num);
 
 int main(void)
 {
-    int spaces;
-    show_n_char('*', WIDTH);
-    printf("\n");
-    show_n_char(SPACE, 12);
-    printf("%s\n", NAME);
-    spaces = (WIDTH - strlen(ADDRESS)) / 2; // 计算要跳多少空格
-    show_n_char(SPACE, spaces);
-    printf("%s\n", ADDRESS);
-    spaces = (WIDTH - strlen(PLACE)) / 2; // 计算要跳多少空格
-    show_n_char(SPACE, spaces);
-    printf("%s\n", PLACE);
-    show_n_char('*', WIDTH);
-    putchar('\n');
+	int spaces;
+	show_n_char('*', WIDTH);
+	printf("\n");
+	show_n_char(SPACE, 12);
+	printf("%s\n", NAME);
+	spaces = (WIDTH - strlen(ADDRESS)) / 2; // 计算要跳多少空格
+	show_n_char(SPACE, spaces);
+	printf("%s\n", ADDRESS);
+	spaces = (WIDTH - strlen(PLACE)) / 2; // 计算要跳多少空格
+	show_n_char(SPACE, spaces);
+	printf("%s\n", PLACE);
+	show_n_char('*', WIDTH);
+	putchar('\n');
 
-    return 0;
+	return 0;
 }
 
 void show_n_char(char ch, int num)
 {
-    int count;
-    for (count = 0; count < num; count++)
-        putchar(ch);
+	int count;
+	for (count = 0; count < num; count++)
+		putchar(ch);
 }

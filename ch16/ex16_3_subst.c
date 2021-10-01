@@ -4,10 +4,10 @@
 
 int main(void)
 {
-    int y = 5;
+	int y = 5;
 
-    PSQR(y);
-    PSQR(2 + 4);
+	PSQR(y);
+	PSQR(2 + 4);
 
-    return 0;
+	return 0;
 }

@@ -7,40 +7,39 @@ char *s_gets(char *st, int n);
 
 int main(void)
 {
-    char flower[SIZE];
-    char addon[] = "s smell like old shoes.";
-    char bug[BUGSIZE];
-    int available;
-    puts("What is your favorite flower?");
-    s_gets(flower, SIZE);
-    if ((strlen(addon) + strlen(flower) + 1) <= SIZE)
-        strcat(flower, addon);
-    puts(flower);
-    puts("What is your favorite bug?");
-    s_gets(bug, BUFSIZ);
-    available = BUGSIZE - strlen(bug) - 1;
-    // strncat()区别于strcat()，第三个参数指定最大添加字符数（不包括最后的空字符）
-    strncat(bug, addon, available);
-    puts(bug);
+	char flower[SIZE];
+	char addon[] = "s smell like old shoes.";
+	char bug[BUGSIZE];
+	int available;
+	puts("What is your favorite flower?");
+	s_gets(flower, SIZE);
+	if ((strlen(addon) + strlen(flower) + 1) <= SIZE)
+		strcat(flower, addon);
+	puts(flower);
+	puts("What is your favorite bug?");
+	s_gets(bug, BUFSIZ);
+	available = BUGSIZE - strlen(bug) - 1;
+	// strncat()区别于strcat()，第三个参数指定最大添加字符数（不包括最后的空字符）
+	strncat(bug, addon, available);
+	puts(bug);
 
-    return 0;
+	return 0;
 }
 
 char *s_gets(char *st, int n)
 {
-    char *ret_val;
-    int i = 0;
-    ret_val = fgets(st, n, stdin);
-    if (ret_val)
-    {
-        while (st[i] != '\n' && st[i] != '\0')
-            i++;
-        if (st[i] == '\n')
-            st[i] = '\0';
-        else
-            while (getchar() != '\n')
-                continue;
-    }
+	char *ret_val;
+	int i = 0;
+	ret_val = fgets(st, n, stdin);
+	if (ret_val) {
+		while (st[i] != '\n' && st[i] != '\0')
+			i++;
+		if (st[i] == '\n')
+			st[i] = '\0';
+		else
+			while (getchar() != '\n')
+				continue;
+	}
 
-    return ret_val;
+	return ret_val;
 }

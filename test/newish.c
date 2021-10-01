@@ -7,7 +7,7 @@
 
 int main(void)
 {
-    printf("Let's do it!\n");
+	printf("Let's do it!\n");
 
-    return 0;
+	return 0;
 }
