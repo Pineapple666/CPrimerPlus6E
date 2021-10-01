@@ -1,3 +1,4 @@
+/* 编译器设置 */
 {
 	"version": "2.0.0",
 	"tasks": [
@@ -19,6 +20,25 @@
 			],
 			"group": "build",
 			"detail": "编译器: D:\\DevTools\\Cygwin\\bin\\gcc.exe"
-		}
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc 生成活动文件",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${workspaceFolder}/out/${fileBasenameNoExtension}.out"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "编译器: /usr/bin/gcc"
+		},
 	]
 }

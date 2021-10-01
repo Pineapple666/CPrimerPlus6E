@@ -1,3 +1,4 @@
+/* C/C++ 标准和特性 */
 {
     "configurations": [
         {
@@ -7,6 +8,24 @@
             ],
             "defines": [],
             "compilerPath": "D:\\DevTools\\MinGW\\mingw64\\bin\\gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerArgs": [],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c11",
             "cppStandard": "c++14",
             "intelliSenseMode": "linux-gcc-x64",
