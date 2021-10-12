@@ -5,11 +5,11 @@ int main(void)
 {
 	int ch;
 	FILE *fp;
-	char fname[50]; // 存储文件名
+	char filename[50]; // 存储文件名
 	printf("Enter the name of the file: ");
-	scanf("%s", fname);
-	printf("will open %s\n", fname);
-	fp = fopen(fname, "r"); // 打开带读取的文件
+	scanf("%s", filename);
+	printf("will open %s\n", filename);
+	fp = fopen(filename, "r"); // 打开带读取的文件
 	if (fp == NULL) { // 如果失败
 		printf("Failed to open file. Bye\n");
 		exit(EXIT_FAILURE); // 退出程序
