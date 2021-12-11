@@ -11,8 +11,7 @@ int main(void)
 	printf("\nan n if it is wrong.\n");
 	printf("Uh...is your number %d?\n", guess);
 
-	while ((response = getchar()) != 'y') // 获取响应
-	{
+	while ((response = getchar()) != 'y') { // 获取响应
 		if (response == 'n')
 			printf("Well, then, is it %d\n", ++guess);
 		else
@@ -20,6 +19,8 @@ int main(void)
 		while (getchar() != '\n')
 			continue; // 跳过剩余的输入行
 	}
+
+	printf("I knew I could do it!\n");
 
 	return 0;
 }
