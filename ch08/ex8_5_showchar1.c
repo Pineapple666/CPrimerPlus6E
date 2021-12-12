@@ -10,7 +10,7 @@ int main(void)
 	printf("Enter a character and two integers:\n");
 
 	while ((ch = getchar()) != '\n') {
-		int result = scanf("%d %d", &rows, &cols);
+		scanf("%d %d", &rows, &cols);
 		display(ch, rows, cols);
 		// 编译器给出类型转换的警告，用强制类型转换
 		// display((char)ch, rows, cols);

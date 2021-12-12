@@ -10,10 +10,11 @@ int main(void)
 	printf("Enter a character and two integers:\n");
 
 	while ((ch = getchar()) != '\n') {
-		if (scanf("%d %d", &rows, &cols) !=
-		    2) // 丢弃scanf后面的所有字符
+		// 判断是否输入两个数字，不是则退出程序
+		if (scanf("%d %d", &rows, &cols) != 2)
 			break;
 		display(ch, rows, cols);
+		// 丢弃scanf后面的所有字符
 		while (getchar() != '\n')
 			continue;
 		printf("Enter another character and two integers:\n");
