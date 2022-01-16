@@ -1,5 +1,9 @@
 {
+    "editor.rulers": [
+        80
+    ],
     "files.associations": {
-        "*.h": "c" // 默认所有 .h 文件都为 C 头文件
-    }
+        "*.h": "c",
+        "cstdlib": "c"
+    },
 }

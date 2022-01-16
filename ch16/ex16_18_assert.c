@@ -1,11 +1,13 @@
 // assert.c -- 使用 assert()
-#include <stdio.h>
-#include <math.h>
+// #define NDEBUG
 #include <assert.h>
+#include <math.h>
+#include <stdio.h>
 
 int main(void)
 {
 	double x, y, z;
+
 	puts("Enter a pair of numbers (0 0 to quit): ");
 	while (scanf("%lf%lf", &x, &y) == 2 && (x != 0 || y != 0)) {
 		z = x * x - y * y;
