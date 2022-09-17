@@ -1,9 +1,7 @@
 .idea/
 
-out/
-
 test/
 
-cmake-build-debug/
+build/
 
 CMakeLists.txt
