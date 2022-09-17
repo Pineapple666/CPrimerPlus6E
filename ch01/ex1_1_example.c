@@ -1,3 +1,8 @@
+/**
+ * @file ex1_1_example.c
+ * @brief C 源代码示例
+ * @date 2022-09-17
+ */
 #include <stdio.h>
 
 int main(void)
