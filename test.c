@@ -5,13 +5,11 @@
 
 int main(void)
 {
-	int arr[SIZE];
+	int num1 = 1;
+	int num10 = 10;
 
-	for (int i = 1; i <= SIZE; i++)
-		arr[i] = i;
-
-	for (int i = 1; i <= SIZE; i++)
-		printf("%d ", arr[i]);
+//	printf("1 / 10 = %d", 1/10);
+	printf("1 / 10 = %d", num1 / num10);
 
 	return 0;
 }

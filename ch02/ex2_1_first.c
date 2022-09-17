@@ -1,9 +1,9 @@
 // first.c
 #include <stdio.h>
 
-int main(void)
+int main(void) // 一个简单的C程序
 {
-	int num;
+	int num; // 定义一个名为num的变量
 	num = 1;
 
 	printf("I am a simple ");
