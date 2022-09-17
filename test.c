@@ -9,7 +9,7 @@ int main(void)
 	int num10 = 10;
 
 //	printf("1 / 10 = %d", 1/10);
-	printf("1 / 10 = %d", num1 / num10);
+	printf("1 / 10 = %d", (num1 / num10));
 
 	return 0;
 }
