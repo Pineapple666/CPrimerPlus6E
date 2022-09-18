@@ -1,15 +1,13 @@
-// test.c -- 测试文件
+/**
+ * @file test.c
+ * @brief 测试文件
+ * @date 2022-09-18
+ */
 #include <stdio.h>
-
-#define SIZE 3
 
 int main(void)
 {
-	int num1 = 1;
-	int num10 = 10;
+    printf("%d", sizeof(int));
 
-//	printf("1 / 10 = %d", 1/10);
-	printf("1 / 10 = %d", (num1 / num10));
-
-	return 0;
+    return 0;
 }
