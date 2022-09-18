@@ -8,7 +8,7 @@
 
 ## 运行环境
 
-可以在 Windows/Linux/MacOS 上运行，因为 CMake 是跨平台的，Windows 上也有相关 GCC 编译器的实现。理论上只要要配置好编译器和CMake，就可以运行此仓库的代码。
+可以在 Windows/Linux/MacOS 上运行，因为 CMake 是跨平台的，Windows 上也有相关 GCC 编译器的实现。理论上只要配置好编译器和CMake，就可以运行此仓库的代码。
 
 
 ## vscode插件推荐
