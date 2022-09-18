@@ -18,6 +18,7 @@
 - `CMake Tools` 运行、调试CMake项目的官方插件
 - `Clang-Format` 代码格式化插件
 - `TabOut` Tab键自动跳出括号
+- `Doxygen Documentation Generator` 可以快速生成注释文档
 
 
 ## 推荐教程
